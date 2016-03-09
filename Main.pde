@@ -12,8 +12,6 @@ void setup() {
 
 void draw() {
   
-  print(gamestate);
-  
   switch(gamestate) {
   
     /*
@@ -63,4 +61,4 @@ void mousePressed() {
   
   
   
-}
+}  
