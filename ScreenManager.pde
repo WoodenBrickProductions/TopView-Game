@@ -1,7 +1,7 @@
 public class ScreenManager{
-  
-  Button Menu = new Button(1160,20,80,80);
-
+  GUIManager guiManager = new GUIManager();
+  Button Menu = new Button(1200,20,60,60);
+  MapManager mapmanager = new MapManager();
   
     public ScreenManager() {
   
@@ -14,8 +14,8 @@ public class ScreenManager{
   
     public void init() {
         background(0);
-        fill(255);
-        rect(0,0,width,height/6);
+        fill(0);
+        rect(0,0,width,height/8);
         
       
       
@@ -30,18 +30,20 @@ public class ScreenManager{
     }
     
     public void render() {
-
-           if(Menu.ButtonPressed()) {
-       Menu.DrawButton(125); 
+ 
+      mapmanager.render();    
+      guiManager.render();
+          
+      if(Menu.ButtonPressed()) {
+          Menu.DrawButton(125); 
         
       
-        }else{
-          Menu.DrawButton(255);
+       }else{
+         Menu.DrawButton(255);
     
-        }  
-          
-
+       }  
       
+          
       
       
     }
