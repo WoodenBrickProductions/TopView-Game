@@ -1,16 +1,20 @@
 MainMenu mainMenu = new MainMenu();
 ScreenManager screenManager = new ScreenManager();
+AI ai = new AI();
+Player player = new Player();
 
 public static int gamestate = 0;
 
 void setup() {
   size(1280, 800);
-  
-
 }
 
 
 void draw() {
+  
+  println(player.xpos + "  " + player.ypos);
+  println(test.xpos + "  " + test.ypos);
+  
   
   switch(gamestate) {
   

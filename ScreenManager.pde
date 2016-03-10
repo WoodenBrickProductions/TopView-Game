@@ -2,7 +2,9 @@ public class ScreenManager{
   GUIManager guiManager = new GUIManager();
   Button Menu = new Button(1200,20,60,60);
   MapManager mapmanager = new MapManager();
-  
+  AI ai = new AI();
+  Player player = new Player();
+    
     public ScreenManager() {
   
   
@@ -13,16 +15,16 @@ public class ScreenManager{
   
   
     public void init() {
-        background(0);
+      //ai.init(); 
+      
+      background(0);
         fill(0);
         rect(0,0,width,height/8);
-        
-      
-      
+    
     }
     
     public void tick() {
-      
+      player.tick();
       
       
       
@@ -32,6 +34,11 @@ public class ScreenManager{
     public void render() {
  
       mapmanager.render();    
+      //ai.render();
+      player.render();
+      
+      
+      
       guiManager.render();
           
       if(Menu.ButtonPressed()) {
